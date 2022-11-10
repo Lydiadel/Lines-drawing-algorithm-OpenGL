@@ -27,6 +27,9 @@ void lineSegment (void)
       // Test case 3
       glVertex2i (300, 300);
       glVertex2i (10, 10);
+      // Test case 4
+      glVertex2i (200, 300);
+      glVertex2i (250, 50); 
     glEnd ( );
     glFlush ( );                    // Process all OpenGL routines as quickly as possible.
 }
