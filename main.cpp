@@ -21,6 +21,9 @@ void lineSegment (void)
       // Test case 1
       glVertex2i (1, 2);
       glVertex2i (100, 20);
+      // Test case 2
+      glVertex2i (10, 200);
+      glVertex2i (50, 10);                 // Specify line-segment geometry.
     glEnd ( );
     glFlush ( );                    // Process all OpenGL routines as quickly as possible.
 }
