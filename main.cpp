@@ -1,4 +1,5 @@
 // First Program in OpenGL
+// Lydia Delgado Uriarte
 // Lines drawing algorithm
 // g++ main.cpp -o main -lglut -lGLU -lGL
 
@@ -10,14 +11,16 @@ void init (void)
     glMatrixMode (GL_PROJECTION);         // Set projection parameters.
     gluOrtho2D (0.0, 400.0, 0.0, 400.0);  //coordinate limits for the picture we want to display.
 }
+
 void lineSegment (void)
 {
     glClear (GL_COLOR_BUFFER_BIT);        // Clear display window.
 
     glColor3f (0.0, 0.4, 0.2);            // Set line segment color to green.
     glBegin (GL_LINES);
-      glVertex2i (180, 15);                 // Specify line-segment geometry.
-      glVertex2i (10, 145);
+      // Test case 1
+      glVertex2i (1, 2);
+      glVertex2i (100, 20);
     glEnd ( );
     glFlush ( );                    // Process all OpenGL routines as quickly as possible.
 }
@@ -32,6 +35,8 @@ void points (void) {
     glFlush();
 }
 
+
+
 int main (int argc, char** argv)
 {
     glutInit (&argc, argv);    // Initialize GLUT.
@@ -41,7 +46,7 @@ int main (int argc, char** argv)
     glutCreateWindow ("Lines Drawing Algorithm"); // Create display window.
     init (); // Execute initialization procedure.
     //glutDisplayFunc(lineSegment);    // Send graphics to display window.
-    glutDisplayFunc (points);
+    glutDisplayFunc (lineSegment);
     glutMainLoop ( );    // Display everything and wait.
     return 0;
 }
